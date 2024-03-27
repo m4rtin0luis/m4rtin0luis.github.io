@@ -39,6 +39,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .txt_ctn h1{
