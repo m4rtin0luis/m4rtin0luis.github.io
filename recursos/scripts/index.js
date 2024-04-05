@@ -30,14 +30,4 @@ const animation = () => {
 // Run App
 document.addEventListener("DOMContentLoaded", () => {
     animation();
-    const btn = document.querySelector(".txt_ctn img");
-    btn.addEventListener("click", () => {
-        const mainElement = document.querySelector(".about_ctn");
-        const mainPosition = mainElement.offsetTop;
-
-        window.scrollTo({
-            top: mainPosition,
-            behavior: "smooth"
-        })
-    })
 });
