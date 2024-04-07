@@ -34,6 +34,14 @@ const scrollAutomatic = () => {
     });
 };
 
+const scrollSobreMi = () => {
+    const sobreMi = document.querySelectorAll(".nav__links");
+    sobreMi[0].addEventListener("click", () => {
+        const section = document.querySelector(".main__description");
+        section.scrollIntoView({ behavior: "smooth" });
+    });
+};
+
 
 const scrollFunction = () => {
     let positionScroll = window.scrollY || window.pageYOffset;
@@ -50,4 +58,5 @@ document.addEventListener("DOMContentLoaded", () => {
     animation();
     window.addEventListener("scroll", scrollFunction);
     scrollAutomatic();
+    scrollSobreMi();
 });

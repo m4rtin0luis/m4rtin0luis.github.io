@@ -177,5 +177,6 @@ body{
 
     .description__box01, .description__box02{
         width: inherit;
+        align-items: center;
     }
 }
