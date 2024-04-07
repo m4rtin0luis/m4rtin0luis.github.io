@@ -1,31 +1,34 @@
-// index.js
-
 const animation = () => {
-    const h1 = document.querySelector("h1");
-    const h2 = document.querySelector("h2");
-    const bt = document.querySelector("img");
-    const nav = document.querySelector("nav");
+
+    const elements = ["h1", "h2", "img", "nav"];
+    for (let i=0; i<elements.length; i++){
+        elements[i] = document.querySelector(elements[i]);
+    }
 
     setTimeout(() => {
-        h1.style.opacity = 1;
+        elements[0].style.opacity = 1;
     }, 1000);
 
     setTimeout(() => {
-        h2.style.opacity = 1;
+        elements[1].style.opacity = 1;
     }, 2000);
 
     setTimeout(() => {
-        bt.style.opacity = 1;
+        elements[2].style.opacity = 1;
     }, 3000);
 
     setTimeout(() => {
-        nav.style.opacity = 1;
+        elements[3].style.opacity = 1;
     }, 4000);
 
     setTimeout(() => {
-        bt.className = "desplazar";
+        elements[2].className = "animation";
     }, 5000);
 };
+
+
+
+
 
 // Run App
 document.addEventListener("DOMContentLoaded", () => {
