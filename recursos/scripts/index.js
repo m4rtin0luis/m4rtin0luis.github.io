@@ -26,11 +26,28 @@ const animation = () => {
     }, 5000);
 };
 
+const scrollAutomatic = () => {
+    const btn = document.querySelector(".header__content img");
+    btn.addEventListener("click", () => {
+        const section = document.querySelector(".main__description");
+        section.scrollIntoView({ behavior: "smooth" });
+    });
+};
 
 
+const scrollFunction = () => {
+    let positionScroll = window.scrollY || window.pageYOffset;
+    let alturaHeader = document.querySelector(".header").offsetHeight;
+    if(positionScroll >= alturaHeader){
+        const main = document.querySelector(".main");
+        main.style.opacity = 1;
+    }
+}
 
 
 // Run App
 document.addEventListener("DOMContentLoaded", () => {
     animation();
+    window.addEventListener("scroll", scrollFunction);
+    scrollAutomatic();
 });

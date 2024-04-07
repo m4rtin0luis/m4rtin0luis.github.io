@@ -101,11 +101,13 @@ body{
 .main{
     /* border: 1px solid black; */
     width: inherit; height: auto;
-    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.5s ease;
     
 }
 
 .main__description{
+    /* border: 1px solid black; */
     width: inherit; height: 100vh;
     display: flex;
 }
