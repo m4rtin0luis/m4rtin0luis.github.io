@@ -234,6 +234,11 @@ body{
 /* --------------------------------------------------------------------------------------------- */
 
 @media (width <= 700px){
+
+    .header{
+        height: 100vh;
+    }
+
     .header__nav{
         justify-content: center;
         padding: 0;
