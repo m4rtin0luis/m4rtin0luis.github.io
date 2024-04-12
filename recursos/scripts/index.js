@@ -1,6 +1,6 @@
 const animation = () => {
 
-    const elements = ["h1", "h2", "img", "nav"];
+    const elements = ["header", "h1", "h2", "img", "nav"];
     for (let i=0; i<elements.length; i++){
         elements[i] = document.querySelector(elements[i]);
     }
@@ -22,10 +22,18 @@ const animation = () => {
     }, 4000);
 
     setTimeout(() => {
-        elements[2].className = "animation";
+        elements[4].style.opacity = 1;
     }, 5000);
+
+    setTimeout(() => {
+        elements[3].className = "animation";
+    }, 6000);
 };
 
+
+
+
+// Función para scrollear a través del botón.
 const scrollAutomatic = () => {
     const btn = document.querySelector(".header__content img");
     btn.addEventListener("click", () => {
@@ -34,15 +42,24 @@ const scrollAutomatic = () => {
     });
 };
 
-const scrollSobreMi = () => {
-    const sobreMi = document.querySelectorAll(".nav__links");
-    sobreMi[0].addEventListener("click", () => {
+
+
+
+
+// Funcion para scrollear a las distintas secciones de la web.
+const scrollRun = () => {
+    const link = document.querySelectorAll(".nav__links");
+    link[0].addEventListener("click", () => {
         const section = document.querySelector(".main__description");
         section.scrollIntoView({ behavior: "smooth" });
     });
 };
 
 
+
+
+
+// Función para detectar la posición del scroll y activar animación.
 const scrollFunction = () => {
     let positionScroll = window.scrollY || window.pageYOffset;
     let alturaHeader = document.querySelector(".header").offsetHeight;
@@ -58,5 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
     animation();
     window.addEventListener("scroll", scrollFunction);
     scrollAutomatic();
-    scrollSobreMi();
+    scrollRun();
 });
