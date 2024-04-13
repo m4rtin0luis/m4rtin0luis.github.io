@@ -136,9 +136,10 @@ body{
 }
 
 .description__box01 img{
-    /* border: 1px solid black; */
-    width: 100%;
-    object-fit: cover;
+    border: 1px solid black;
+    height: 60%;
+    border-radius: 50%;
+    /* object-fit: cover; */
 }
 
 .description__box02{
@@ -235,10 +236,6 @@ body{
 
 @media (width <= 700px){
 
-    .header{
-        height: 100vh;
-    }
-
     .header__nav{
         justify-content: center;
         padding: 0;
@@ -253,6 +250,11 @@ body{
     .description__box01, .description__box02{
         width: inherit;
         align-items: center;
+    }
+
+    .description__box01 img{
+        width: 50%;
+        margin: 30px;
     }
 
     .main__projects{
