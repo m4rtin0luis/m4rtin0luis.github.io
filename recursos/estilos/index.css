@@ -37,7 +37,13 @@ body{
     transition: opacity 2s ease;
 }
 
+
+
+
+
+
 .header__nav{
+    /* border: 1px solid black; */
     width: 100%; height: 10vh;
     display: flex;
     justify-content: flex-end;
@@ -49,6 +55,7 @@ body{
 }
 
 .nav__links{
+    /* border: 1px solid black; */
     font-family: "Poppins", sans-serif;
     color: black;
     text-decoration: none;
@@ -69,12 +76,9 @@ body{
 
 
 
-
-
-
 .header__content{
     /* border: 1px solid black; */
-    width: 100%; height: 90vh;
+    width: 100%; height: 75vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -99,6 +103,7 @@ body{
 }
 
 .header__content img{
+    /* border: 1px solid black; */
     opacity: 0;
     transition: opacity 1s ease;
     transition: transform 0.5s ease;
@@ -110,16 +115,40 @@ body{
     transition: 0.9s;
 }
 
+
+
+
+
+
+.header__whatsapp{
+    /* border: 1px solid black; */
+    width: inherit; height: 15vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+}
+
+.header__whatsapp img{
+    width: auto; height: 60%;
+    cursor: pointer;
+}
+
 /* --------------------------------------------------------------------------------------------- */
 /* MAIN */
 /* --------------------------------------------------------------------------------------------- */
 .main{
-    /* border: 1px solid black; */
+    border: 1px solid black;
     width: inherit; height: auto;
     opacity: 0;
     transition: opacity 2s ease;
-    margin-top: 50px;
 }
+
+
+
+
+
 
 .main__description{
     /* border: 1px solid black; */
@@ -136,7 +165,7 @@ body{
 }
 
 .description__box01 img{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 60%;
     border-radius: 50%;
     /* object-fit: cover; */
@@ -150,7 +179,7 @@ body{
     align-items: flex-start;
     justify-content: center;
     gap: 10px;
-    padding: 0 30px;
+    padding: 20px 30px;
     margin-top: 10px;
 }
 
@@ -173,22 +202,19 @@ body{
 
 
 
-
-
-
 .main__projects{
-    border: 1px solid black;
-    width: inherit; height: auto; max-height: 200vh;
+    /* border: 1px solid black; */
+    width: inherit; height: 50vh;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
     gap: 25px;
     display: none;
 }
 
 .projects__card{
-    border: 1px solid black;
-    width: 30%; height: 50vh;
+    /* border: 1px solid black; */
+    width: 30%; height: auto;
     box-shadow: 3px 3px 5px black;
     display: flex;
     flex-direction: column;
@@ -196,7 +222,7 @@ body{
     justify-content: center;
     gap: 10px;
     text-align: center;
-    margin: 50px 0px;
+    margin: 5px 0px;
 }
 
 .projects__card img{
@@ -258,9 +284,11 @@ body{
     }
 
     .main__projects{
+        height: auto;
         max-height: 450vh;
         flex-direction: column;
         align-items: center;
+        margin: 50px 0px;
     }
 
     .projects__card{
@@ -268,16 +296,7 @@ body{
         gap: 5px;
     }
 
-    .main__tecnology{
-        height: auto;
-        margin-top: 50px;
-    }
-
-    .tecnology__icons{
-        flex-direction: column;
-    }
-
-    .tecnology__icons img{
-        width: 40%;
+    .header__whatsapp{
+        position: static;
     }
 }

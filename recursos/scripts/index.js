@@ -70,10 +70,27 @@ const scrollFunction = () => {
 }
 
 
+
+
+
+// Función para abrir el chat de Whatsapp
+const openWhatsapp = () => {
+    const btn = document.querySelector(".header__whatsapp img");
+    btn.addEventListener("click", () => {
+        const number = "543412164708";
+        window.open(`https://wa.me/${number}`, "_blank");
+    });
+};
+
+
+
+
+
 // Run App
 document.addEventListener("DOMContentLoaded", () => {
     animation();
     window.addEventListener("scroll", scrollFunction);
     scrollAutomatic();
     scrollRun();
+    openWhatsapp();
 });
