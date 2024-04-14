@@ -9,7 +9,10 @@
 /* --------------------------------------------------------------------------------------------- */
 /* CUSTOM PROPERIES */
 /* --------------------------------------------------------------------------------------------- */
-
+:root{
+    --font: "Poppins", sans-serif;
+    --blockColor: #D2B4DE;
+}
 
 
 
@@ -29,6 +32,7 @@ body{
 /* --------------------------------------------------------------------------------------------- */
 
 .header{
+    /* border: 1px solid black; */
     width: 100%; height: 100vh;
     background-image: url(../svg/background.svg);
     background-repeat: no-repeat;
@@ -56,7 +60,7 @@ body{
 
 .nav__links{
     /* border: 1px solid black; */
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     color: black;
     text-decoration: none;
 }
@@ -87,7 +91,7 @@ body{
 }
 
 .header__content h1{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 400;
     font-size: 2.5rem;
     opacity: 0;
@@ -95,7 +99,7 @@ body{
 }
 
 .header__content h2{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 300;
     font-size: 1.2rem;
     opacity: 0;
@@ -126,7 +130,7 @@ body{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 15px;
     position: fixed;
 }
 
@@ -139,7 +143,7 @@ body{
 /* MAIN */
 /* --------------------------------------------------------------------------------------------- */
 .main{
-    border: 1px solid black;
+    /* background: var(--blockColor); */
     width: inherit; height: auto;
     opacity: 0;
     transition: opacity 2s ease;
@@ -166,7 +170,7 @@ body{
 
 .description__box01 img{
     /* border: 1px solid black; */
-    height: 60%;
+    height: 50%;
     border-radius: 50%;
     /* object-fit: cover; */
 }
@@ -184,13 +188,13 @@ body{
 }
 
 .description__box02 h2{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 400;
     font-size: 2.5rem;
 }
 
 .description__box02 p{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 300;
     font-size: 1rem;
     text-align: center;
@@ -230,13 +234,13 @@ body{
 }
 
 .projects__card h2{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 300;
     font-size: 1rem;
 }
 
 .projects__card p{
-    font-family: "Poppins", sans-serif;
+    font-family: var(--font);
     font-weight: 300;
     font-size: 1rem;
 }
@@ -250,11 +254,48 @@ body{
 
 
 
+.main__service{
+    /* border: 1px solid black; */
+    width: inherit; height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.service__card{
+    /* border: 1px solid black; */
+    background: rgb(248, 249, 249);
+    width: 25%; height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 5px 5px 3px rgb(204, 209, 209);
+    font-family: var(--font);
+    text-align: center;
+    padding: 50px 10px;
+}
+
+.service__card img{
+    /* border: 1px solid black; */
+    width: 20%;
+}
+
+.service__card h3{
+    color: #2980B9;
+}
 
 
 
 
 
+
+.footer{
+    border: 1px solid black;
+    width: inherit; height: 60vh;
+    background: rgb(23, 32, 42);
+}
 
 /* --------------------------------------------------------------------------------------------- */
 /* RESPONSIVE DESING */
@@ -298,5 +339,17 @@ body{
 
     .header__whatsapp{
         position: static;
+    }
+
+    .main__service{
+        height: auto;
+        flex-direction: column;
+        gap: 20px;
+        padding: 50px 0;
+    }
+
+    .service__card{
+        width: 90%;
+        padding: 30px 0px; 
     }
 }
